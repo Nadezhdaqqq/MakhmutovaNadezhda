@@ -23,18 +23,24 @@ return result;
 
 
 //Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.//
-/*
+
 int CutNumber()
 {
-int num;
+int num = new Random().Next();
+Console.WriteLine("Current Random is" + num);
 
-Console. WriteLine("Input number : ");
-num = Convert.ToInt32(Console.ReadLine());
+if (num > 99)
 
 
+Console.WriteLine((num /100)  % 10);
+
+  
+
+return num;
 }
 
-*/
+int num = CutNumber();
+Console.WriteLine(num);
 
 
 
