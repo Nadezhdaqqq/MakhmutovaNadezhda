@@ -24,20 +24,35 @@ return result;
 
 //Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.//
 
+int CutNumber()
+{
+
 int num;
 int x;
-Console. WriteLine("Input number from : ");
+
+Console. WriteLine("Input number: ");
 num = Convert.ToInt32(Console.ReadLine());
 
-while (num > 1000)
+if (num < 100)
+Console. WriteLine("Третьей цифры нет");
+
+if (num >= 100 && num < 1000)
+ x = num % 10;
+
+if (num >= 1000)
+
+while (num > 1000) num /= 10;
 {
-   x = num / 10;
-   Console. WriteLine(x);
-   break;
+      x = num % 10;
 }
 
 
+return x;
 
+}
+
+int num = CutNumber();
+Console.WriteLine(num);
 
 
 
