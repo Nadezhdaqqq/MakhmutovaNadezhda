@@ -27,16 +27,15 @@ return result;
 int CutNumber()
 {
 int num = new Random().Next();
-Console.WriteLine("Current Random is" + num);
+Console.WriteLine("Current Random is  " + num);
 
-if (num > 99)
+while (num < 1000)
+{
 
+}
+num--;
 
-Console.WriteLine((num /100)  % 10);
-
-  
-
-return num;
+return result;
 }
 
 int num = CutNumber();
