@@ -23,7 +23,7 @@ return result;
 
 
 //Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.//
-
+/*
 int CutNumber()
 {
 
@@ -34,18 +34,14 @@ Console. WriteLine("Input number: ");
 num = Convert.ToInt32(Console.ReadLine());
 
 if (num < 100)
-Console. WriteLine("Третьей цифры нет");
+{
+    Console. WriteLine("Третьей цифры нет");
+}
 
-if (num >= 100 && num < 1000)
- x = num % 10;
-
-if (num >= 1000)
-
-while (num > 1000) num /= 10;
+while (num > 999) num /= 10;
 {
       x = num % 10;
 }
-
 
 return x;
 
@@ -54,7 +50,7 @@ return x;
 int num = CutNumber();
 Console.WriteLine(num);
 
-
+*/
 
 
 //Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным//
