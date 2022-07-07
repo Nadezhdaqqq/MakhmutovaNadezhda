@@ -22,3 +22,22 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(Sum(n));
 */
+
+
+
+// Напишите программу, которая задаёт массив из m элементов и выводит их на экран.//
+
+
+void ShowArray(int [] array)
+{
+  for (int i = 0; i < array.Length; i++)
+  Console.Write(array[i] + "  ");
+  Console.WriteLine();
+
+}
+
+Console.Write ("Input array size:   ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+ShowArray(size);
+
