@@ -1,4 +1,4 @@
-﻿
+﻿/*
 int [] RandomArray (int size)
 {
     int [] newArray = new int [size];
@@ -97,6 +97,7 @@ double diff = max - min;
 return diff;
 
 }
+*/
 
 // 1. Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.//
 
@@ -123,7 +124,7 @@ Console.WriteLine("Sum of elements in odd positions is:   " + Sum(array));
 
 
 // 3. Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.//
-
+/*
 Console.WriteLine("Input size of array:   ");
 int size = Convert.ToInt32(Console.ReadLine());
 
@@ -131,3 +132,4 @@ double [] array = Double(size);
 ShowDoubleArray(array);
 
 Console.WriteLine("The difference between the maximum and minimum element is:  " + Difference(array));
+*/
