@@ -51,28 +51,22 @@ for (int i = 0; i < array.GetLength(0); i++)
 }
 
 void Index (int [,] array)
-{Console.Write("Input the row:   ");
+{
+Console.Write("Input the row:   ");
 int i = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Input the column:   ");
 int j = Convert.ToInt32(Console.ReadLine());
+              
+if (i < 0 || i > array.GetLength(0) - 1 || j < 0 || j > array.GetLength(1) - 1)
+            
+    Console.WriteLine("The element does not exist");
+            
+else 
+               
+    Console.Write(array[i, j]);
+         
 
-     for (i = 0; i < array.GetLength(0); i++)
-            
-                for (j = 0; j < array.GetLength(1); j++)
-                
-       if (i < 0 || i > array.GetLength(0) - 1 || j < 0 || j > array.GetLength(1) - 1)
-            
-                Console.WriteLine("Элемент не существует");
-            
-            else
-                { array[i, j] = ;                                //беда
-                    Console.Write("{0} ", array[i, j]);
-                }
-                Console.WriteLine();
-            
-           
-    
 }
 
 //Задайте двумерный массив размером m×n, заполненный случайными вещественными числами//
@@ -89,11 +83,11 @@ Show2dArrayDouble(myArray);
 */
 
 //Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.//
-
-Console.Write("Input num of rows:   ");
+/*
+Console.Write("Input quantity of rows:   ");
 int m = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Input num of columns:   ");
+Console.Write("Input quantity of columns:   ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 int [,] myArray = CreatRandom2dArray(m, n);
@@ -101,3 +95,16 @@ Show2dArray(myArray);
 Console.WriteLine("");
 
 Index (myArray);
+*/
+
+//Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.//
+
+Console.Write("Input quantity of rows:   ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input quantity of columns:   ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+int [,] myArray = CreatRandom2dArray(m, n);
+Show2dArray(myArray);
+Console.WriteLine("");
