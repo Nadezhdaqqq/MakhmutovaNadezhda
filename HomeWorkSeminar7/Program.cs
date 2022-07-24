@@ -1,23 +1,23 @@
 ﻿
-double [,] CreatRandom2dArrayDouble (int rows, int columns)
+double[,] CreatRandom2dArrayDouble(int rows, int columns)
 {
-double [,] newArray = new double [rows, columns];
+    double[,] newArray = new double[rows, columns];
 
     for (int i = 0; i < rows; i++)
-      for (int j = 0; j < columns; j++)
-        newArray [i, j] = new Random().NextDouble();
+        for (int j = 0; j < columns; j++)
+            newArray[i, j] = new Random().NextDouble();
 
-return newArray;
+    return newArray;
 
 }
 
-void Show2dArrayDouble (double [,] array)
+void Show2dArrayDouble(double[,] array)
 {
-for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j =0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
 
-        Console.Write(array[i, j] + "  ");
+            Console.Write(array[i, j] + "  ");
 
         Console.WriteLine();
     }
@@ -25,49 +25,69 @@ for (int i = 0; i < array.GetLength(0); i++)
 }
 
 
-int [,] CreatRandom2dArray (int rows, int columns)
+int[,] CreatRandom2dArray(int rows, int columns)
 {
-int [,] newArray = new int [rows, columns];
+    int[,] newArray = new int[rows, columns];
 
     for (int i = 0; i < rows; i++)
-      for (int j = 0; j < columns; j++)
-        newArray [i, j] = new Random().Next(0, 1000);
+        for (int j = 0; j < columns; j++)
+            newArray[i, j] = new Random().Next(0, 1000);
 
-return newArray;
+    return newArray;
 
 }
 
-void Show2dArray(int [,] array)
+void Show2dArray(int[,] array)
 {
-for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j =0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
 
-        Console.Write(array[i, j] + "  ");
+            Console.Write(array[i, j] + "  ");
 
         Console.WriteLine();
     }
 
 }
 
-void Index (int [,] array)
+void Index(int[,] array)
 {
-Console.Write("Input the row:   ");
-int i = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Input the row:   ");
+    int i = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Input the column:   ");
-int j = Convert.ToInt32(Console.ReadLine());
-              
-if (i < 0 || i > array.GetLength(0) - 1 || j < 0 || j > array.GetLength(1) - 1)
-            
-    Console.WriteLine("The element does not exist");
-            
-else 
-               
-    Console.Write(array[i, j]);
-         
+    Console.Write("Input the column:   ");
+    int j = Convert.ToInt32(Console.ReadLine());
+
+    if (i < 0 || i > array.GetLength(0) - 1 || j < 0 || j > array.GetLength(1) - 1)
+
+        Console.WriteLine("The element does not exist");
+
+    else
+
+        Console.Write(array[i, j]);
+
 
 }
+
+void AverageSum (int [,] array)
+{
+for (int j = 0; j < array.GetLength(1); j++)
+{
+    double sum = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        sum += array[i, j];
+    }
+    Console.Write($"{ sum / array.GetLength(0)} ");
+}
+Console.ReadLine();
+
+}
+
+
+
+
+
 
 //Задайте двумерный массив размером m×n, заполненный случайными вещественными числами//
 
@@ -105,6 +125,8 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input quantity of columns:   ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int [,] myArray = CreatRandom2dArray(m, n);
+int[,] myArray = CreatRandom2dArray(m, n);
 Show2dArray(myArray);
 Console.WriteLine("");
+
+AverageSum(myArray);
