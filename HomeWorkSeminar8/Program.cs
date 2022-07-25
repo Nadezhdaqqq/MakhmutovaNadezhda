@@ -42,6 +42,31 @@ int [,] Decreasing (int [,] array)
  return array;       
 }
 
+int FindRow (int [,] array) 
+{
+
+int min = 0;
+int indexMin = 0;
+
+for (int i = 0; i < array.GetLength(0); i++)
+{  
+    int sum = 0;
+        for (int j = 0; j < array.GetLength(1); j++)  
+        {
+            sum = sum + array[i,j];
+        }
+        if (i == 0) min = sum;
+        if (sum < min)
+            {
+              min = sum;
+              indexMin = i;
+            }
+}
+return indexMin;
+
+}
+
+
 // Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.//
 /*
 Console.Write("Input quantity of rows:   ");
@@ -59,11 +84,52 @@ Show2dArray(Decreasing(myArray));
 */
 
 
+//Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.//
+/*
+Console.Write("Input quantity of rows:   ");
+int m = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input quantity of columns (The quantity of columns must be less than the quantity of rows):   ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (m <= n)
+Console.Write("You entered the wrong quantity of columns");
+else
+
+{
+int[,] myArray = CreatRandom2dArray(m, n);
+Show2dArray(myArray);
+Console.WriteLine("");
+
+Console.Write($"The smallest sum of elements in a row:    {FindRow(myArray)+1}");
+
+}
+*/
+
+//Заполните спирально массив 4 на 4.//
 
 
+int[,] newArray = new int[4, 4];
 
+int temp = 1;
+int i = 0;
+int j = 0;
 
+while (temp <= newArray.GetLength(0) * newArray.GetLength(1))
+{
+  newArray[i, j] = temp;
+  temp++;
+  if (i <= j + 1 && i + j < newArray.GetLength(1) - 1)
+    j++;
+  else if (i < j && i + j >= newArray.GetLength(0) - 1)
+    i++;
+  else if (i >= j && i + j > newArray.GetLength(1) - 1)
+    j--;
+  else
+    i--;
+}
 
+Show2dArray(newArray);
 
 
 
